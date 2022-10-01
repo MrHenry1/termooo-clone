@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       <IconBox>
-        <Icon> ★ </Icon>
+        <Icon> A </Icon>
       </IconBox>
       <Title> Termu </Title>
       <IconBox>
-        <Icon> ♥️ </Icon>
+        <Icon> Z </Icon>
       </IconBox>
     </HeaderContainer>
   )
