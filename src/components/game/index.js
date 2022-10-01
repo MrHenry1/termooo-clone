@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import toast, { Toaster } from 'toast';
 
 import { useResultHook } from '../../../hooks/useResult.js'
-import { getWord } from '../../../utils/getWord.js'
+import { getWord, checkWord } from '../../../utils/getWord.js'
 
 import {GameContainer, GameTables, InputArea, Input, Button} from './style.js'
 
@@ -29,6 +29,26 @@ const Game = () => {
   function guessAWord(wordGuessed) {
     
     if(wordGuessed.length != 5 || !wordGuessed) return
+    
+    wordGuessed = checkWord(wordGuessed)
+    
+    toast.remove()
+    
+    if(!wordGuessed) {
+      toast('Word not registered!', {
+        position: 'botton-center',
+        style: {
+          background: '#393E46',
+          border: '3px dashed #f6bb1b',
+          color: '#EEEEEE',
+          fontWeight: 'bold',
+          fontFamily: '"Inter Tight", sans-seric',
+        },
+        icon: '😓'
+      })
+      
+      return;
+    }
     
     if(guesses.includes(wordGuessed)) {
       toast('Word already guessed!', {
@@ -100,7 +120,7 @@ const Game = () => {
         }
       </GameTables>
       <InputArea>
-        <Input value={wordWrinting} minLength="5" maxLength="5" onChange={(e) => e.target.value.length <= 5 && setWordWriting(e.target.value)} placeholder="Type a guess!" />
+        <Input value={wordWrinting} minLength="5" maxLength="5" onChange={(e) => e.target.value.length <= 5 && setWordWriting(e.target.value)} onFocus={() => toast.remove()} placeholder="Type a guess!" />
         <Button onClick={() => guessAWord(wordWrinting.toUpperCase())}
           transition = { { type: "tween", duration: 0.09, stiffness: 1000 } }
           whileTap = { { scale: 1.1, opacity: 0.7 } }
