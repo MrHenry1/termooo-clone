@@ -1049,6 +1049,8 @@ ganso
 treze
 cinco
 dardo
+galho
+bardo
 `.toUpperCase().split('\n')
 
 export { words }
