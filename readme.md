@@ -8,4 +8,5 @@
 - Hot Toaster 📌
 
 # View
-♥️ You can check it: [**Here**](https://netlify.app/termu)
+💙 Original Game: [**Term.ooo**](https://term.ooo)
+♥️ You can check my version: [**Here**](https://termu.netlify.app/)
