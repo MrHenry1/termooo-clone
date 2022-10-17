@@ -5,7 +5,7 @@
 - React ⚛️
 - Styled Components 💅
 - Framer Motion ✨
-- Hot Toaster 📌
+- React Hot Toast 📌
 
 # View
 💙 Original Game: [**Term.ooo**](https://term.ooo)
