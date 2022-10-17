@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export const GameContainer = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   
   display:flex;
   align-items: center;
