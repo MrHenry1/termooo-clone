@@ -6,6 +6,7 @@
 - Styled Components 💅
 - Framer Motion ✨
 - React Hot Toast 📌
+- SystemJs ⚙️
 
 # View
 💙 Original Game: [**Term.ooo**](https://term.ooo)
